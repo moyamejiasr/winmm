@@ -27,7 +27,7 @@ func EnumOutDevices() ([]WaveOutDevice, error)  {
 		result := C.waveOutGetDevCaps(C.UINT_PTR(i),
 			C.LPWAVEOUTCAPS(unsafe.Pointer(&device)), C.sizeof_WAVEOUTCAPS)
 		if result != MMNoError {
-			return devices, getInErrText(result)
+			return devices, getOutErrText(result)
 		}
 		devices = append(devices, device)
 	}
