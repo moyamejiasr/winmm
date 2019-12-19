@@ -28,7 +28,7 @@ func main() {
 
 	// Create WaveHeader that contains the buffer
 	// for reading with specified format
-	// and length of one second
+	// and length of two seconds
 	rBuffer := winmm.NewWaveHeader(wFmt, 2)
 	// Copy raw buffer from reading in a new
 	// WaveHeader struct for playing
